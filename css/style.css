@@ -1,0 +1,304 @@
+/* Mengatur gaya dasar untuk seluruh halaman */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.8); 
+    transform-origin: top center;
+}
+
+/* Styling untuk header dan footer */
+header, footer {
+    background-color: #333;
+    color: white;
+    margin: 20px auto;
+    padding: 25px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk container konverter suhu */
+.converter {
+    background-color: #e0e0e0;
+    margin: 15px auto;
+    padding: 25px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk grup input */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Agar tetap sejajar di tengah */
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%; 
+    max-width: 500px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling untuk label teks */
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Styling untuk input field */
+input {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Mengatur warna input yang disabled (output suhu) */
+input:disabled {
+    background-color: #f4f4f4;
+}
+
+/* Styling untuk placeholder input */
+input::placeholder {
+    color: #ccc; 
+    font-style: italic; 
+    font-size: 14px; 
+}
+
+/* Styling untuk grup tombol (Convert & Reset) */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Styling umum untuk tombol */
+button {
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #2E2E2E;
+    color: white;
+}
+
+/* Styling untuk tombol Convert */
+#convert {
+    background: #2D5B59;
+    color: #E3F4F4;
+}
+
+#convert:hover {
+    background: #3C7A78;
+    transform: translateY(-2px);
+}
+
+#convert:active {
+    background: #25504E;
+    transform: scale(0.98);
+}
+
+/* Styling untuk tombol Reset */
+#reset {
+    background: #6B3E3E;
+    color: #F4E3E3;
+}
+
+#reset:hover {
+    background: #854E4E;
+    transform: translateY(-2px);
+}
+
+#reset:active {
+    background: #5A2E2E;
+    transform: scale(0.98);
+}
+
+/* Styling untuk tombol Reverse */
+#reverse {
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    background: #3F3F3F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: #D0D0D0;
+}
+
+#reverse:hover {
+    background: #5A5A5A;
+    transform: rotate(180deg);
+}
+
+#reverse:active {
+    transform: scale(0.95);
+}
+
+/* Styling untuk hasil perhitungan */
+.result {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.result h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 12px;
+}
+
+.result-box {
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-box p {
+    font-size: 16px;
+    color:  #ccc;
+    margin: 0;
+    padding: 0 10px;
+    text-align: center; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+}
+
+/* Styling untuk bagian formula konversi */
+.formula {
+    background-color: #cfcfcf;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.formula-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.formula-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formula-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3E8D7A;
+    font-style: italic;
+}
+
+/* Styling untuk Tooltip */
+#tooltip-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+/* Tooltip icon */
+#tooltip-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    stroke: #333;
+    transition: stroke 0.3s ease;
+}
+
+/* Untuk membuat icon Tooltip berubah warna ketika di-hover */
+#tooltip-container:hover #tooltip-icon {
+    stroke: #007bff;
+}
+
+/* Styling teks pada Tooltip */
+#tooltip {
+    visibility: hidden;
+    max-width: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 13px;
+    white-space: normal;
+    word-wrap: break-word;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip untuk panah pada tooltip (segitiga) */
+#tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+/* Menampilkan teks tooltip saat icon di-hover */
+#tooltip-container:hover #tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+#error-message {
+    color: red;
+    font-size: 12px;
+    margin: 5px 0 0 10px;
+    margin-top: -6px;
+    text-align: left;
+    min-height: 20px; /* Reserve space */
+    visibility: hidden;
+    position: absolute; /* Prevents shifting */
+}
